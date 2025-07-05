@@ -84,9 +84,9 @@ public class Delete_InOut_Record {
 					System.out.println("No record found.............");
 				}
 			}
-			catch(Exception e)
+			catch(Exception ex)
 			{
-				System.out.println(e);
+				System.out.println(ex);
 			}
 		
 	}
