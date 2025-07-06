@@ -42,16 +42,6 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>com.automation</groupId>
-			<artifactId>selenium-framework</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
   </dependencies>
-	
-	
-
-  
-  
-  
 </project>
