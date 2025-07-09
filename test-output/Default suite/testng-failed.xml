@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Pages.Delete_InOut_Record">
+      <class name="Pages.Program2CssSelector">
         <methods>
-          <include name="DRecord" invocation-numbers="1"/>
-          <include name="openBrowser"/>
+          <include name="Method2" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Pages.Delete_InOut_Record -->
+      </class> <!-- Pages.Program2CssSelector -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

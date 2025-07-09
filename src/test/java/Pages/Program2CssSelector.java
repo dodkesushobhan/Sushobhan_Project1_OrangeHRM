@@ -1,6 +1,10 @@
 package Pages;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,8 +15,19 @@ import org.testng.annotations.Test;
 
 public class Program2CssSelector {
 	@Test(dataProvider="DP" , dataProviderClass=Data_provider.class)
-	public void Method2(String Username , String Password) throws InterruptedException
+	public void Method2(String Username , String Password) throws InterruptedException, IOException
 	{
+		String path = "E:\\Java\\Sushobhan_Project1_OrangeHRM\\target\\properties1.properties";
+		FileInputStream f = new FileInputStream(path);
+		Properties p = new Properties();
+		p.load(f);
+		//String value = p.getProperty("Username");
+		/*p.setProperty("Histry", "Passed");
+		FileOutputStream output = new FileOutputStream(path);
+		p.store(output,"Basic changes");
+		System.out.println(value);
+		f.close();*/
+		
 		int emp = 3;
 		//open browser
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dodke sushobhan j\\Downloads\\chromedriver-win64\\chromedriver-win64\\Chromedriver.exe");
@@ -26,8 +41,8 @@ public class Program2CssSelector {
 		
 		//Login
 		WebElement user= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[placeholder='Username']")));
-		user.sendKeys(Username);
-		driver.findElement(By.cssSelector("input[placeholder='Password']")).sendKeys(Password);
+		user.sendKeys(p.getProperty("Username"));
+		driver.findElement(By.cssSelector("input[placeholder='Password']")).sendKeys(p.getProperty("Password"));
 		driver.findElement(By.cssSelector("button[type='submit'")).click();
 		
 		//Click on Time
