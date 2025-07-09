@@ -17,7 +17,7 @@ public class Program2CssSelector {
 	@Test(dataProvider="DP" , dataProviderClass=Data_provider.class)
 	public void Method2(String Username , String Password) throws InterruptedException, IOException
 	{
-		String path = "E:\\Java\\Sushobhan_Project1_OrangeHRM\\target\\properties1.properties";
+		String path = "E:\\Java\\Sushobhan_Project1_OrangeHRM\\src\\test\\resources\\properties1.properties";
 		FileInputStream f = new FileInputStream(path);
 		Properties p = new Properties();
 		p.load(f);
@@ -28,7 +28,8 @@ public class Program2CssSelector {
 		System.out.println(value);
 		f.close();*/
 		
-		int emp = 3;
+		
+		int emp = 1;
 		//open browser
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dodke sushobhan j\\Downloads\\chromedriver-win64\\chromedriver-win64\\Chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
