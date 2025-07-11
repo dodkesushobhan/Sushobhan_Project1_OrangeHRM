@@ -2,12 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-09T21:56:59 IST" name="Default suite" finished-at="2025-07-09T21:58:41 IST" duration-ms="101496">
+  <suite started-at="2025-07-11T22:26:42 IST" name="Default suite" finished-at="2025-07-11T22:27:07 IST" duration-ms="24805">
     <groups>
     </groups>
-    <test started-at="2025-07-09T21:56:59 IST" name="Default test" finished-at="2025-07-09T21:58:41 IST" duration-ms="101496">
-      <class name="Pages.Program2CssSelector">
-        <test-method signature="Method2(java.lang.String,java.lang.String)[pri:0, instance:Pages.Program2CssSelector@33d512c1]" started-at="2025-07-09T21:56:59 IST" name="Method2" data-provider="DP" finished-at="2025-07-09T21:58:41 IST" duration-ms="101417" status="PASS">
+    <test started-at="2025-07-11T22:26:42 IST" name="Default test" finished-at="2025-07-11T22:27:07 IST" duration-ms="24805">
+      <class name="Pages.Delete_InOut_Record">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:Pages.Delete_InOut_Record@2b71e916]" started-at="2025-07-11T22:26:42 IST" name="openBrowser" finished-at="2025-07-11T22:26:50 IST" duration-ms="8040" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="DRecord(java.lang.String,java.lang.String)[pri:0, instance:Pages.Delete_InOut_Record@2b71e916]" started-at="2025-07-11T22:26:50 IST" name="DRecord" data-provider="DP" finished-at="2025-07-11T22:27:07 IST" duration-ms="16674" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,8 +26,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Method2 -->
-      </class> <!-- Pages.Program2CssSelector -->
+        </test-method> <!-- DRecord -->
+      </class> <!-- Pages.Delete_InOut_Record -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

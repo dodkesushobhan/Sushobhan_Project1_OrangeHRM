@@ -1,11 +1,16 @@
 package Pages;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
@@ -26,7 +31,7 @@ public class Delete_InOut_Record {
 	}
 
 	@Test(dataProvider="DP" , dataProviderClass= Data_provider.class)
-	public void DRecord(String username , String password)
+	public void DRecord(String username , String password) throws IOException, InterruptedException
 	{
 		int num;
 		 
@@ -45,10 +50,7 @@ public class Delete_InOut_Record {
 		attendance.click();
 		driver.findElement(By.xpath("//a[text()='My Records']")).click();
 		
-		
-		
-		
-		
+
 			//WebElement recordsHeading = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[class='orangehrm-horizontal-padding orangehrm-vertical-padding'] span[class='oxd-text oxd-text--span']")));
 		
 			// Text which include record count
@@ -88,6 +90,14 @@ public class Delete_InOut_Record {
 			{
 				System.out.println(ex);
 			}
+			
+			//After Exection need to capture screenshot
+			Thread.sleep(10000);
+			File sc = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			String path = "E:\\Git repo\\Screeshot_using_selenium\\DeletedRecord_" + System.currentTimeMillis()+ ".jpg";
+			File destination = new File(path);
+			FileHandler.copy(sc, destination);
+					
 		
 	}
 }
