@@ -1,7 +1,6 @@
 package Pages;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
