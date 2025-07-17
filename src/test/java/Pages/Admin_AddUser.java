@@ -32,9 +32,15 @@ public class Admin_AddUser {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password"))).sendKeys("admin123");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
+		//Admin button
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul/li[1]/a/span"))).click();
+		//Add button
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/div[2]/div[1]/button"))).click();
+		//Fist field
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='oxd-select-text-input' and text()='-- Select --']"))).click();
 		driver.findElement(By.xpath("(//div[@role='listbox']//child::div)[2]")).click();
+		//Second field
+		driver.findElement(By.xpath("//input[@placeholder='Type for hints...']")).sendKeys("Sushobhan");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@role='listbox']//child::div)[1]"))).click();
 	}
 }
