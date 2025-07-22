@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Admin_AddUser {
+public class Admin_AddUser_2 {
 	WebDriver driver;
 	WebDriverWait wait;
 	@BeforeMethod
