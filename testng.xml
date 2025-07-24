@@ -3,8 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Pages.Admin_AddUser"/>
-      <class name="Pages.Add_Employee"/>
+      <class name="Pages.Add_Employee_1"/>
+      <class name="Pages.Admin_AddUser_2"/>
+      <class name="Pages.After_AddUser_Login"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
