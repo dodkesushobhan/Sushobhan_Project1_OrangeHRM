@@ -51,7 +51,10 @@ public class Add_Employee_1 {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("middleName"))).sendKeys(pr.getProperty("middlename"));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("lastName"))).sendKeys(pr.getProperty("lastname"));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[2]/div[1]/div[1]/div[2]/input[1]"))).sendKeys(Keys.CONTROL + "a" , Keys.DELETE);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[2]/div[1]/div[1]/div[2]/input[1]"))).sendKeys(pr.getProperty("id"));
+		long time = System.currentTimeMillis();
+		String timeStr = String.valueOf(time);
+		String ID = timeStr.substring(timeStr.length() - 4);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[2]/div[1]/div[1]/div[2]/input[1]"))).sendKeys(ID);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type='submit']"))).click();
 
 		//Logout Login After Signup
@@ -59,6 +62,7 @@ public class Add_Employee_1 {
 		/*wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul/li/span[@class='oxd-userdropdown-tab']/i"))).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul/li/ul/li[4]/a"))).click();
 		*/
-		
+		Thread.sleep(5000);
+		driver.quit();
 	}
 }

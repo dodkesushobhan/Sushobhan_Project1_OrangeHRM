@@ -29,7 +29,7 @@ public class After_AddUser_Login {
 		driver.manage().window().maximize();
 	}
 	@Test
-	public void login() throws IOException
+	public void login() throws IOException, InterruptedException
 	{
 		String path = "E:\\Java\\Sushobhan_Project1_OrangeHRM\\src\\test\\resources\\Admin_userdata.properties";
 		Properties pr = new Properties();
@@ -42,5 +42,7 @@ public class After_AddUser_Login {
 		WebElement pass = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
 		pass.sendKeys(pr.getProperty("pass"));
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		Thread.sleep(5000);
+		driver.quit();
 	}
 }

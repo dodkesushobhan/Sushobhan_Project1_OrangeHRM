@@ -6,6 +6,7 @@
       <class name="Pages.Add_Employee_1"/>
       <class name="Pages.Admin_AddUser_2"/>
       <class name="Pages.After_AddUser_Login"/>
+      <class name="Pages.Delete_AddedUser"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

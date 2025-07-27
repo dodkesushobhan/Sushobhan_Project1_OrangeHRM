@@ -30,7 +30,7 @@ public class Admin_AddUser_2 {
 		
 	}
 	@Test
-	public void AddUser() throws IOException
+	public void AddUser() throws IOException, InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username"))).sendKeys("Admin");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password"))).sendKeys("admin123");
@@ -67,5 +67,7 @@ public class Admin_AddUser_2 {
 		
 		//submit button
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type='submit']"))).click();
+		Thread.sleep(5000);
+		driver.quit();
 	}
 }

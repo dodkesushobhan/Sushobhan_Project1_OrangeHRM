@@ -3,11 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Pages.Program2CssSelector">
+      <class name="Pages.Delete_AddedUser">
         <methods>
-          <include name="Method2"/>
+          <include name="mainMethod"/>
+          <include name="open"/>
         </methods>
-      </class> <!-- Pages.Program2CssSelector -->
+      </class> <!-- Pages.Delete_AddedUser -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
