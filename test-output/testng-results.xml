@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-25T00:25:16 IST" name="Default suite" finished-at="2025-07-25T00:25:36 IST" duration-ms="19146">
+  <suite started-at="2025-07-28T23:57:51 IST" name="Default suite" finished-at="2025-07-28T23:58:00 IST" duration-ms="9606">
     <groups>
     </groups>
-    <test started-at="2025-07-25T00:25:16 IST" name="Default test" finished-at="2025-07-25T00:25:36 IST" duration-ms="19146">
-      <class name="Pages.Add_Employee_1">
-        <test-method is-config="true" signature="Method1()[pri:0, instance:Pages.Add_Employee_1@2b71e916]" started-at="2025-07-25T00:25:16 IST" name="Method1" finished-at="2025-07-25T00:25:22 IST" duration-ms="5956" status="PASS">
+    <test started-at="2025-07-28T23:57:51 IST" name="Default test" finished-at="2025-07-28T23:58:00 IST" duration-ms="9606">
+      <class name="Pages_2.My_Info_page">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:Pages_2.My_Info_page@dd05255]" started-at="2025-07-28T23:57:51 IST" name="openBrowser" finished-at="2025-07-28T23:57:58 IST" duration-ms="7037" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Method1 -->
-        <test-method signature="Add_emp()[pri:0, instance:Pages.Add_Employee_1@2b71e916]" started-at="2025-07-25T00:25:22 IST" name="Add_emp" finished-at="2025-07-25T00:25:36 IST" duration-ms="13103" status="PASS">
+        </test-method> <!-- openBrowser -->
+        <test-method signature="Contact_Details()[pri:1, instance:Pages_2.My_Info_page@dd05255]" started-at="2025-07-28T23:57:58 IST" name="Contact_Details" finished-at="2025-07-28T23:58:00 IST" duration-ms="2479" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Add_emp -->
-      </class> <!-- Pages.Add_Employee_1 -->
+        </test-method> <!-- Contact_Details -->
+        <test-method signature="Assigned_Emergency_Contacts()[pri:2, instance:Pages_2.My_Info_page@dd05255]" started-at="2025-07-28T23:58:00 IST" name="Assigned_Emergency_Contacts" finished-at="2025-07-28T23:58:00 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Assigned_Emergency_Contacts -->
+        <test-method signature="Assign_Membership()[pri:3, instance:Pages_2.My_Info_page@dd05255]" started-at="2025-07-28T23:58:00 IST" name="Assign_Membership" finished-at="2025-07-28T23:58:00 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Assign_Membership -->
+        <test-method signature="Upload_Profile_Photo()[pri:3, instance:Pages_2.My_Info_page@dd05255]" started-at="2025-07-28T23:58:00 IST" name="Upload_Profile_Photo" finished-at="2025-07-28T23:58:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Upload_Profile_Photo -->
+      </class> <!-- Pages_2.My_Info_page -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
