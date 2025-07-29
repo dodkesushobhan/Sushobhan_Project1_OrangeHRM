@@ -12,7 +12,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -43,13 +42,29 @@ public class My_Info_page {
 		WebElement pass = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
 		pass.sendKeys(pr.getProperty("pass"));
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nav/div[2]/ul/li[6]/a/span"))).click();
 		
 	}
 	
 	@Test(priority=1)
-	public void Contact_Details()
+	public void Contact_Details() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nav/div[2]/ul/li[6]/a/span"))).click();
+		//click on contact details
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/div/div/div[2]/div[2]/a"))).click();
+		
+		// enter address
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//input[contains(@class,'oxd-input')])[2]"))).sendKeys("Main road,");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[contains(@class,'oxd-input')])[4]"))).sendKeys("Latur ");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[contains(@class,'oxd-input')])[5]"))).sendKeys("Maharashtra ");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[contains(@class,'oxd-input')])[6]"))).sendKeys("413520");
+		//country dropdown
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/div/div[2]/div/div/div[2]/i"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='listbox']//span[text()='India']"))).click();
+		//mobile number
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[contains(@class,'oxd-input')])[8]"))).sendKeys("9689604160");
+		driver.findElement(By.xpath("//div/button[text()=' Save ']")).click();
+		Thread.sleep(5000);
 		
 	}
 	
@@ -62,6 +77,25 @@ public class My_Info_page {
 	@Test(priority=3)
 	public void Assign_Membership()
 	{
+		// membership 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/div/div/div[2]/div[10]/a"))).click();
+		// Add membership
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[contains(@class, 'oxd-button--text')])[1]"))).click();
+		// fields
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='oxd-select-text--after'])[1]"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='listbox']//span[text()='British Computer Society (BCS)']"))).click();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='oxd-select-text--after'])[2]"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='listbox']//span[text()='Individual']"))).click();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form/div/div/div[3]/div/div[2]/input"))).sendKeys("200");
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='oxd-select-text--after'])[3]"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='listbox']//span[text()='Indian Rupee']"))).click();
+		
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		
+
 		
 	}
 	

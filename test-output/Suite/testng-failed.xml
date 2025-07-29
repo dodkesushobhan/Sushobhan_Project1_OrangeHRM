@@ -3,12 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Pages.Delete_AddedUser">
+      <class name="Pages_2.My_Info_page">
         <methods>
-          <include name="mainMethod"/>
-          <include name="open"/>
+          <include name="openBrowser"/>
+          <include name="Assign_Membership"/>
         </methods>
-      </class> <!-- Pages.Delete_AddedUser -->
+      </class> <!-- Pages_2.My_Info_page -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
