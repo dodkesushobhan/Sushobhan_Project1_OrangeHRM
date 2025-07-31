@@ -63,6 +63,8 @@ public class My_Info_page {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='listbox']//span[text()='India']"))).click();
 		//mobile number
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[contains(@class,'oxd-input')])[8]"))).sendKeys("9689604160");
+		
+
 		driver.findElement(By.xpath("//div/button[text()=' Save ']")).click();
 		Thread.sleep(5000);
 		
@@ -71,6 +73,9 @@ public class My_Info_page {
 	@Test(priority=2)
 	public void Assigned_Emergency_Contacts()
 	{
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='orangehrm-tabs-item' and text()='Emergency Contacts']"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/div[2]/div/div/button[1]/i[1]"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@class='oxd-input--active'])[2]"))).sendKeys("Hello");
 		
 	}
 	
@@ -93,7 +98,10 @@ public class My_Info_page {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='oxd-select-text--after'])[3]"))).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='listbox']//span[text()='Indian Rupee']"))).click();
 		
+		driver.findElement(By.xpath("(//i[@class='oxd-icon bi-calendar oxd-date-input-icon'])[1]")).click();
+		driver.findElement(By.xpath("//div[@class='oxd-calendar-date' and text()='15']")).click();
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		
 		
 
 		
