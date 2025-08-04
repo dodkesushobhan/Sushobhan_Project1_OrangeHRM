@@ -42,6 +42,7 @@ public class My_Info_page {
 		WebElement pass = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
 		pass.sendKeys(pr.getProperty("pass"));
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		//Click on MyInfo from list
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nav/div[2]/ul/li[6]/a/span"))).click();
 		
 	}
@@ -73,10 +74,17 @@ public class My_Info_page {
 	@Test(priority=2)
 	public void Assigned_Emergency_Contacts()
 	{
+		//click on emergency contact
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='orangehrm-tabs-item' and text()='Emergency Contacts']"))).click();
+		//Click on Add
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/div[2]/div/div/button[1]/i[1]"))).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@class='oxd-input--active'])[2]"))).sendKeys("Hello");
-		
+		//Enter data into all the fields
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form/div/div/div/div/div[2]/input"))).sendKeys("Janardhan Dodke");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form/div/div/div[2]/div/div[2]/input"))).sendKeys("Father");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form/div[2]/div/div/div/div[2]/input"))).sendKeys("221101");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[1]/div[2]/div[1]/div[2]/div[1]/div[2]/input[1]"))).sendKeys("7773981274");
+		//click on submit
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
 	}
 	
 	@Test(priority=3)
@@ -108,8 +116,26 @@ public class My_Info_page {
 	}
 	
 	@Test(priority=3)
-	public void Upload_Profile_Photo()
+	public void Upload_Profile_Photo() throws InterruptedException
 	{
+		/*click on profile icon
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@class='employee-image']"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[4]"))).sendKeys("E:\\Saved Pictures\\3.jpg");
 		
+		//img[@class='employee-image']*/
+		
+		wait.until(ExpectedConditions.urlContains("pim/viewPersonalDetails"));
+        Thread.sleep(2000);
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhotograph/empNumber/7");
+
+        // 4. Upload file using input type='file'
+        Thread.sleep(5000);  // Ensure page is fully loaded
+        WebElement upload = driver.findElement(By.xpath("//input[@type='file']"));
+
+        // 5. Enter full file path of the image (change path as per your PC)
+        upload.sendKeys("E:\\Saved Pictures\\3.jpg");  // Change this path
+
+        // 6. Click Save
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()=' Save ']"))).click();
 	}
 }

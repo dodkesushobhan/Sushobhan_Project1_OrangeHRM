@@ -6,7 +6,7 @@
       <class name="Pages_2.My_Info_page">
         <methods>
           <include name="openBrowser"/>
-          <include name="Assigned_Emergency_Contacts"/>
+          <include name="Upload_Profile_Photo"/>
         </methods>
       </class> <!-- Pages_2.My_Info_page -->
     </classes>

@@ -5,8 +5,8 @@
     <classes>
        <class name="Pages.Add_Employee_1"/>
       		<class name="Pages.Admin_AddUser_2"/>   
-      <class name="Pages_2.My_Info_page"/>  
-      <!--<class name="Pages.After_AddUser_Login"/>
+      <!--<class name="Pages_2.My_Info_page"/>  
+      <class name="Pages.After_AddUser_Login"/>
       <class name="Pages.Delete_AddedUser"/>-->
       
     </classes>
