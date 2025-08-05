@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Delete_InOut_Record {
+public class Delete_Punchin_Punchout {
 	WebDriver driver, wait;
 	@BeforeMethod
 	public void openBrowser()

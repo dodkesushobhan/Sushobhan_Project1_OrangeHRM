@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class Punch_Out_Punch_In {
+public class Emp_PunchIn_PunchOut {
 	@Test(dataProvider="DP" , dataProviderClass=Data_provider.class)
 	public void Method2(String Username , String Password) throws InterruptedException, IOException
 	{

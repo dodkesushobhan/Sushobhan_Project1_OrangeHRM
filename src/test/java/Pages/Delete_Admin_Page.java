@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Delete_AddedUser {
+public class Delete_Admin_Page {
 
 	WebDriver driver;
 	WebDriverWait wait;
@@ -44,6 +44,6 @@ public class Delete_AddedUser {
 		driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/button[1]")).click();
 		driver.findElement(By.xpath("//div/div[3]/button[2]")).click();
 		Thread.sleep(5000);
-		driver.quit();
+		//driver.quit();
 	}
 }

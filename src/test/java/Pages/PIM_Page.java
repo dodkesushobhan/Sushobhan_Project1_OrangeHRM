@@ -1,5 +1,5 @@
 package Pages;
-
+// 1. Add Employee in organization
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Add_Employee_1 {
+public class PIM_Page {
 	WebDriver driver;
 	WebDriverWait wait ;
 

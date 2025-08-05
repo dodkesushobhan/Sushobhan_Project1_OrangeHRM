@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class My_Info_page {
+public class My_Info_Page {
 
 	WebDriver driver;
 	WebDriverWait wait;
@@ -118,22 +118,28 @@ public class My_Info_page {
 	@Test(priority=3)
 	public void Upload_Profile_Photo() throws InterruptedException
 	{
-		/*click on profile icon
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@class='employee-image']"))).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[4]"))).sendKeys("E:\\Saved Pictures\\3.jpg");
-		
-		//img[@class='employee-image']*/
-		
-		wait.until(ExpectedConditions.urlContains("pim/viewPersonalDetails"));
-        Thread.sleep(2000);
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhotograph/empNumber/7");
+		//click on profile icon
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@class='employee-image']"))).click();
+		// Wait for the image element to load
+		WebElement img = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img.employee-image")));
+
+		// Get the src attribute
+		String src = img.getAttribute("src");  // Example: "/web/index.php/pim/viewPhoto/empNumber/168"
+
+		// Extract empNumber using Java code
+		String[] parts = src.split("/");
+		String empNumber = parts[parts.length - 1];  // "168"
+
+		// Now you can use this in a dynamic URL
+		String url = "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhotograph/empNumber/" + empNumber;
+		driver.get(url);
 
         // 4. Upload file using input type='file'
         Thread.sleep(5000);  // Ensure page is fully loaded
         WebElement upload = driver.findElement(By.xpath("//input[@type='file']"));
 
         // 5. Enter full file path of the image (change path as per your PC)
-        upload.sendKeys("E:\\Saved Pictures\\3.jpg");  // Change this path
+        upload.sendKeys("E:\\Saved Pictures\\1.jpg");  // Change this path
 
         // 6. Click Save
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()=' Save ']"))).click();

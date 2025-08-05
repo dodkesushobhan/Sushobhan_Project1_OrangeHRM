@@ -1,5 +1,5 @@
 package Pages;
-
+// 2. Admin page we can make user a admin using this page 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Admin_AddUser_2 {
+public class Admin_Page {
 	WebDriver driver;
 	WebDriverWait wait;
 	@BeforeMethod
@@ -68,6 +68,6 @@ public class Admin_AddUser_2 {
 		//submit button
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type='submit']"))).click();
 		Thread.sleep(5000);
-		driver.quit();
+		//driver.quit();
 	}
 }

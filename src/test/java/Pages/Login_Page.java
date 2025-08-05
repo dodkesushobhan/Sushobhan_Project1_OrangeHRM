@@ -1,5 +1,5 @@
 package Pages;
-
+// 3. Login page with new credentials which is created using PIM and Admin
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class After_AddUser_Login {
+public class Login_Page {
 
 	WebDriver driver;
 	WebDriverWait wait;
